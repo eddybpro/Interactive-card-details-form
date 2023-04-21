@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="first-container">
+      <div class="img-container-front">
+        <img src="images/bg-card-front.png" alt="" class="front">
+        <img src="images/card-logo.svg" alt="" class="card-logo">
+        <h1 class="zeros" id="card-num">
+          0000 0000 0000 0000
+        </h1>
+        <p class="card-owner-name">
+          Jane Appleseed
+        </p>
+        <p class="exp-date">
+          00/00
+        </p>
+      </div>
+      <div class="img-container-back">
+          <img src="images/bg-card-back.png" alt="" class="back">
+          <p class="three-zeros" id="cvc-card">000</p>
+      </div>
+    </section>
+
+    <section class="second-container">
+      <form action="#">
+        <label for="name">
+          Cardholder Name
+          <input type="text" id="name" placeholder="e.g Jane Appleseed">
+        </label>
+        <label for="card-number">
+          card Number
+          <input type="text" id="card-number" placeholder="e.g 1234 5678 9123 0000">
+          <p class="none error-num">wrong format numbers only</p>
+        </label>
+        <div class="para-div">
+          <p>Exp. Date (MM/YY)</p>
+        <p class="cvc-para">cvc</p>
+        </div>
+
+          <div class="box">
+            <input type="text" id="month" placeholder="mm">
+          <p class="none error">can't be blank</p>
+          </div>
+
+        <div class="box">
+          <input type="text" id="year" placeholder="yy">
+        <p class="none error">can't be blank</p>
+        </div>
+
+          <div class="box">
+            <input type="text" id="cvc" placeholder="e.g.123">
+          <p class="none error">can't be blank</p>
+          </div>
+
+
+        <button class="btn" type="submit">confirm</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <P class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/eddybpro">Eddybpro</a>.
+  </P>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

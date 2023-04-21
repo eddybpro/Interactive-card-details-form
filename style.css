@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    /* (active input border) */
+    --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+
+    /* (input errors) */
+    --Red : hsl(0, 100%, 66%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 'f-box s-box s-box';
+    align-items: center;
+    justify-content: space-between;
+    gap: 22rem;
+}
+
+main .first-container{
+    position: relative;
+    grid-area: f-box;
+    width: 400px;
+    height: 100vh;
+    background: url('images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: -20rem;
+}
+
+main .first-container .img-container-front{
+    position: relative;
+}
+
+main .first-container .img-container-front .front{
+    position: absolute;
+    top: 4rem;
+    left: 6rem;
+}
+
+main .first-container .img-container-front .card-logo{
+    position: absolute;
+    top: 5rem;
+    left: 7rem;
+}
+
+.img-container-front .zeros{
+    position: absolute;
+    width: 350px;
+    top: 13rem;
+    left: 7rem;
+    color: var(--White);
+    letter-spacing: 2px;
+}
+
+.img-container-front .card-owner-name{
+    position: absolute;
+    top: 16rem;
+    left: 7rem;
+    color: var(--White);
+    font-size: 1.1rem;
+}
+
+.img-container-front .exp-date{
+    position: absolute;
+    top: 16rem;
+    left: 28rem;
+    color: var(--White);
+    font-size: 1.1rem;
+}
+
+main .first-container .img-container-back{
+    position: relative;
+}
+
+main .first-container .img-container-back .back{
+    position: absolute;
+    top: 22rem;
+    left: 9rem;
+}
+
+.first-container .img-container-back .three-zeros{
+    position: absolute;
+    top: 28.6rem;
+    color: var(--White);
+    left: 31rem;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+main .second-container{
+    grid-area: s-box;
+}
+
+main .second-container form{
+    padding: 1rem;
+}
+
+.second-container form label{
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.second-container form input{
+    display: block;
+    width: 350px;
+    margin-top: .5rem;
+    padding: .5rem .75rem;
+    border-radius: 8px;
+    border: 1px solid var(--Light-grayish-violet);
+}
+
+#name::placeholder, #card-number::placeholder{
+    font-size: 1.01rem;
+}
+
+.second-container form .error-num{
+    text-transform: capitalize;
+    font-size: .9rem;
+    color: var(--Red);
+}
+
+.second-container form .para-div{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: .5rem;
+}
+
+.second-container form .cvc-para{
+    font-size: 1.01rem;
+    text-transform: uppercase;
+}
+
+.second-container form .box{
+    display: inline-block;
+}
+
+.second-container .box .error{
+    position: absolute;
+    font-size: .9rem;
+    color: var(--Red);
+}
+
+.none{
+    display: none;
+}
+
+#month, #year{
+    display: inline-block;
+    width: 100px;
+}
+
+#cvc{
+    display: inline-block;
+    width: 135px;
+}
+
+#month::placeholder, #year::placeholder{
+    font-size: 1.01rem;
+    text-transform: uppercase;
+}
+
+.second-container form .btn{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    width: 350px;
+    border-radius: 8px;
+    padding: .5rem;
+    border: 1px solid var(--Light-grayish-violet);
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    font-size: 1.01rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+footer{
+    text-align: center;
+    margin: 1rem;
+}
+
+footer a{
+    color: var(--Red);
+    text-decoration: none;
+}
+
+.complete-img{
+    display: block;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.complete-title{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.complete-para{
+    color: var(--Dark-grayish-violet);
+    margin: 1rem 0;
+}
+
+.complete-btn{
+    padding: .5rem 1rem;
+    width: 300px;
+    border-radius: 8px;
+    background-color: var(--Very-dark-violet);
+    color: var(--White);
+    cursor: pointer;
+    font-size: 1.01rem;
+}
+
+
+@media screen and (max-width:1000px) {
+    body{
+        overflow-x: hidden;
+    }
+    main{
+        grid-template-areas: 'f-box'
+        's-box';
+        gap: 6rem;
+    }
+
+    main .first-container{
+        background: url('images/bg-main-mobile.png');
+        width: 100vw;
+        height: 65vh;
+        margin-left: 0;
+    }
+
+    main .first-container .img-container-front{
+        top: 8rem;
+        left: -4rem;
+        z-index: 100;
+    }
+
+    main .first-container .img-container-front .front{
+        width: 60vw;
+        height: 280px;
+    }
+
+    main .first-container .img-container-front .card-logo{
+        width: 90px;
+        height: 50px;
+    }
+
+    .img-container-front .zeros{
+        width: 68vw;
+        top: 14rem;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+    }
+
+    .img-container-front .card-owner-name{
+        top: 18rem;
+    }
+
+    .img-container-front .exp-date{
+        top: 18rem;
+        left: 27rem;
+    }
+
+    main .first-container .img-container-back{
+        top: -20rem;
+        left: -2rem;
+    }
+
+    main .first-container .img-container-back .back{
+        width: 60vw;
+        height: 280px;
+    }
+
+    main .first-container .img-container-back .three-zeros{
+        left: 30rem;
+        top: 30rem;
+    }
+
+    main .second-container form input{
+        width: 80vw;
+    }
+
+    #month, #year{
+        width: 160px;
+    }
+
+    #cvc{
+        width: 220px;
+    }
+
+    .second-container form .btn{
+        margin: 2rem 0 .5rem;
+        width: 80vw;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    main .first-container .img-container-front{
+        top: 10.7rem;
+        left: -5rem;
+        z-index: 100;
+    }
+
+    main .first-container .img-container-front .front{
+        width: 80vw;
+        height: 200px;
+    }
+
+    main .first-container .img-container-front .card-logo{
+        width: 90px;
+        height: 50px;
+    }
+
+    .img-container-front .zeros{
+        width: 68vw;
+        top: 10rem;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+    }
+
+    .img-container-front .card-owner-name{
+        top: 14rem;
+    }
+
+    .img-container-front .exp-date{
+        top: 14rem;
+        left: 21rem;
+    }
+
+    main .first-container .img-container-back{
+        top: -16rem;
+        left: -6rem;
+    }
+
+    main .first-container .img-container-back .back{
+        width: 80vw;
+        height: 200px;
+    }
+
+    main .first-container .img-container-back .three-zeros{
+        left: 23rem;
+        top: 27.4rem;
+    }
+
+    main .second-container form input{
+        width: 90vw;
+    }
+
+    #month, #year{
+        width: 155px;
+    }
+
+    #cvc{
+        width: 200px;
+    }
+
+    .second-container form .btn{
+        margin: 2rem 0 .5rem;
+        width: 90vw;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
